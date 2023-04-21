@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Hind+Guntur:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Hind Guntur', sans-serif;
+  background-color: rgba(245, 245, 245, 0.3);
+}
+.logo {
+  height: 3rem;
+  border: none;
+  margin-left: 3rem;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  margin-top: 1rem;
+}
+.navbar > .navbar-btn {
+  display: none;
+}
+.navbar > .navbar-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+.navbar > .navbar-links > a {
+  display: inline-block;
+  padding: 0.2rem;
+  text-decoration: none;
+  color: #626262;
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+.navbar > .navbar-links > a:hover {
+  transform: scale(1.1);
+  border-bottom: 1px #616161 solid;
+}
+.navbar > .navbar-links > a:last-child {
+  color: #efefef;
+  background: linear-gradient(
+    45deg,
+    rgb(159, 53, 130, 0.8) 0%,
+    rgb(247, 147, 29, 0.8) 100%
+  );
+  border-radius: 0.2rem;
+  margin-right: 3rem;
+  text-decoration: none;
+  border-bottom: none;
+  padding: 0.5rem;
+}
+.navbar > #navbar-check {
+  display: none;
+}
+.navbar > img {
+  width: 3rem;
+  margin-left: 2rem;
+}
+/* hero section - same as used to Biography's page*/
+.section-hero {
+  padding: 2em 0;
+}
+/* hero */
+.hero {
+  padding: 2rem 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  cursor: pointer;
+}
+.hero-description {
+  font-size: 1.5em;
+  line-height: 1.6;
+  margin: 2.4rem 0;
+}
+.heading-primary {
+  letter-spacing: 0.05em;
+  font-size: 3em;
+}
+.heading-primary span {
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  background: #f0ff1c;
+  background: linear-gradient(to right, #f0ff1c 0%, #00ff00 32%, #9521cf 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.social-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 0.5em;
+}
+.social-link:active,
+.social-link:hover {
+  background-color: greenyellow;
+  border: none;
+}
+.profile-pic {
+  width: 70%;
+  border-radius: 20em;
+  border: goldenrod solid 0.3rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 1rem;
+  margin: 3rem;
+  margin-bottom: 15rem;
+}
+.card {
+  flex-direction: column;
+  position: relative;
+  /* border: solid 0.1px #e1dbdb; */
+  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.01);
+  transition: all 0.13s ease-in;
+}
+.card:hover {
+  transform: scale(0.8) rotate(-5deg);
+  border: 2rem solid goldenrod;
+}
+
+.card-img:hover {
+  background-color: #1e960059;
+}
+/* footer styling start */
+.footer {
+  position: relative;
+  width: 100%;
+  background: #f7931e;
+  min-height: 6rem;
+  padding: 1.25rem 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20rem;
+}
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.625rem 0;
+  flex-wrap: wrap;
+}
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 0.625rem;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-0.625rem);
+}
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 0.625rem;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+.menu__link:hover {
+  opacity: 1;
+}
+.footer p {
+  color: #fff;
+  margin: 1rem 0 0.625rem 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.wave {
+  position: absolute;
+  top: -6.25rem;
+  left: 0;
+  width: 100%;
+  height: 6.25rem;
+  background: url('/img/wave.png');
+  background-size: 62.5rem 6.25rem;
+}
+.wave.wave--1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+.wave.wave--2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 0.6rem;
+  animation: animate 4s linear infinite !important;
+}
+.wave.wave--3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0.9rem;
+  animation: animateWaves 2.5s linear infinite;
+}
+.wave.wave--4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 2.5s linear infinite;
+}
+@keyframes animateWaves {
+  0% {
+    background-position-x: 62.5rem;
+  }
+  100% {
+    background-positon-x: 0rem;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-x: -62.5rem;
+  }
+  100% {
+    background-positon-x: 0rem;
+  }
+}
+/* footer styling end */
+
+/* responsiveness */
+@media (max-width: 900px) {
+  .profile-pic {
+    display: none;
+  }
+  .hero {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar > .navbar-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .navbar > .navbar-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .navbar > .navbar-btn > label:hover,
+  .navbar #navbar-check:checked ~ .navbar-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .navbar > .navbar-btn > label > span {
+    display: block;
+    width: 1.5rem;
+    height: 0.6rem;
+    border-top: 0.2rem solid #343434;
+  }
+  .navbar > .navbar-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 5rem;
+    left: 0;
+    background-image: linear-gradient(
+      130deg,
+      rgb(159, 53, 130, 0.95) 0%,
+      rgb(247, 147, 29, 0.9) 100%
+    );
+  }
+  .navbar > .navbar-links > a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    margin-left: 1rem;
+  }
+  .navbar > #navbar-check:not(:checked) ~ .navbar-links {
+    height: 0px;
+  }
+  .navbar > #navbar-check:checked ~ .navbar-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  .navbar > .navbar-links > a:hover {
+    transform: scale(1.1);
+    transform: translateX(2rem);
+    transition: all 0.3s ease-in;
+    border-bottom: none;
+  }
+  .navbar > .navbar-links > a:last-child {
+    background-image: none;
+    color: purple;
+    margin-right: 3rem;
+    text-decoration: none;
+    border-bottom: none;
+    color: #fff;
+  }
+  .logo {
+    margin-left: 0;
+  }
+}
